@@ -14,7 +14,8 @@ module.exports = {
   themeConfig: {
     logo: "https://i.epochtimes.com/assets/uploads/2021/08/id13156667-shutterstock_376153318-450x322.jpg",
     navbar: [...getNavBar()],
-    sidebar: { ...getSideBar() }, 
+    sidebar: [{ ...getSideBar() }
+    ], 
   },
 };
 
