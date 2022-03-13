@@ -35,7 +35,10 @@ function getSideBar() {
     sidebar[`/${folder}/`] = [];
     const folderFiles = fs.readdirSync(path.join(rootFolder, folder));
     const children = [
-      "test 1",
+      {
+        tital: "我的學習歷程",
+        path: '/note/54455',
+      }
     ];
     folderFiles
       .filter((item) => item.toLowerCase() != "readme.md")
