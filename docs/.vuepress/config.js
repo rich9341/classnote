@@ -13,11 +13,21 @@ module.exports = {
   description: "Vuepress ",
   themeConfig: {
     logo: "https://i.epochtimes.com/assets/uploads/2021/08/id13156667-shutterstock_376153318-450x322.jpg",
+    navbar: [...getNavBar()],
     sidebar: { ...getSideBar() },
   },
 };
 
-
+function getNavBar() {
+  const navbar = [];
+  folders.forEach((folder) => {
+    navbar.push({
+      text: folder.toUpperCase(),
+      link: `/${folder}/`,
+    });
+  });
+  return navbar;
+}
 
 function getSideBar() {
   const sidebar = {};
