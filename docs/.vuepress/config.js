@@ -34,7 +34,9 @@ function getSideBar() {
   folders.forEach((folder) => {
     sidebar[`/${folder}/`] = [];
     const folderFiles = fs.readdirSync(path.join(rootFolder, folder));
-    const children = [];
+    const children = [
+      "test 1",
+    ];
     folderFiles
       .filter((item) => item.toLowerCase() != "readme.md")
       .forEach((file) => {
